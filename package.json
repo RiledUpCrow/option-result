@@ -1,0 +1,25 @@
+{
+  "name": "stream-option",
+  "version": "0.1.0",
+  "description": "Stream API for lazy iterable operations using Optional type",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Co0sh/stream-option.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "iterable",
+    "array",
+    "stream",
+    "lazy",
+    "optional",
+    "option",
+    "maybe",
+    "monad"
+  ],
+  "author": "Jakub Sapalski <coosheck@gmail.com> (https://github.com/Co0sh)",
+  "license": "ISC"
+}
