@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "description": "Stream API for lazy iterable operations using Optional type",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Co0sh/stream-option.git"
+    "url": "git+https://github.com/Co0sh/stream-option.git"
   },
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -21,5 +23,8 @@
     "monad"
   ],
   "author": "Jakub Sapalski <coosheck@gmail.com> (https://github.com/Co0sh)",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^3.0.3"
+  }
 }
