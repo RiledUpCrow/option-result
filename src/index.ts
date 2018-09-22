@@ -1,1 +1,2 @@
-console.log("Hello world");
+/* tslint:disable:no-console */
+console.log('Hello world');
