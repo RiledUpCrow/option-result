@@ -1,4 +1,4 @@
-import { Option } from '../src/Option';
+import { Option } from '../src';
 
 describe('Option', () => {
   describe('Basic usage', () => {

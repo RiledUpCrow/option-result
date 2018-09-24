@@ -12,12 +12,12 @@ import { Option } from './Option';
  * Option. Note that `ok` instance method will return `Option<Option<R>>` in
  * such case.
  */
-export class Result<R, E> {
+export class Result<R, E = Error> {
   /**
    * Creates a new success Result with specified value.
    * Throws an Error if the value is null/undefined.
    */
-  public static ok = <R, E>(value: R): Result<R, E> => {
+  public static ok = <R, E = Error>(value: R): Result<R, E> => {
     const result = new Result<R, E>(value, null);
     if (!result.isOk()) {
       throw new Error('Null value passed to Result.ok()');
