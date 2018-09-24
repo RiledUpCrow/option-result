@@ -3,7 +3,9 @@
     "target": "es5",
     "module": "commonjs",
     "declaration": true,
+    "rootDir": "./src",
     "outDir": "./dist",
     "strict": true
-  }
+  },
+  "include": ["./src/**/*.ts"]
 }
