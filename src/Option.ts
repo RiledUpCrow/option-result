@@ -11,8 +11,15 @@ import { Result } from './Result';
 export class Option<T> {
   /**
    * Creates a new Option with specified existing value.
+   * Throws an Error if the value is null/undefined.
    */
-  public static some = <T>(value: T): Option<T> => new Option<T>(value);
+  public static some = <T>(value: T): Option<T> => {
+    const option = new Option<T>(value);
+    if (option.isNone()) {
+      throw new Error('Null value passed to Option.some()');
+    }
+    return option;
+  };
 
   /**
    * Creates a new empty Option.
@@ -46,8 +53,14 @@ export class Option<T> {
   /**
    * Returns the value of the Option. Only call this if you are sure
    * the option contains a value at this point.
+   * Throws an Error if called on an empty Option.
    */
-  public get = (): T => this.value!;
+  public get = (): T => {
+    if (this.isNone()) {
+      throw new Error('Tried to get value from an empty Option');
+    }
+    return this.value!;
+  };
 
   /**
    * Returns the Option's value or specified other value if the Option
