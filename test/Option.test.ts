@@ -16,9 +16,18 @@ describe('Option', () => {
       expect(option.isNone()).toBe(true);
     });
 
+    it('throws when getting if empty', () => {
+      expect(() => Option.none().get()).toThrow();
+    });
+
     it('wraps an existing value', () => {
       const option = Option.wrap('value');
       expect(option.isSome()).toBe(true);
+    });
+
+    it('throws when wrapping null with "some()"', () => {
+      expect(() => Option.some(null)).toThrow();
+      expect(() => Option.some(undefined)).toThrow();
     });
 
     it('wraps a null', () => {
@@ -55,6 +64,36 @@ describe('Option', () => {
       const option = Option.none();
       const result = option.orElse(() => 'bar');
       expect(result).toBe('bar');
+    });
+  });
+
+  describe('Converting to Result', () => {
+    it('converts to a success Result', () => {
+      const option = Option.some('foo');
+      const result = option.okOr('bar');
+      expect(result.isOk()).toBe(true);
+      expect(result.getResult()).toBe('foo');
+    });
+
+    it('converts to an error Result', () => {
+      const option = Option.none();
+      const result = option.okOr('bar');
+      expect(result.isErr()).toBe(true);
+      expect(result.getError()).toBe('bar');
+    });
+
+    it('uses a function to convert to a success Result', () => {
+      const option = Option.some('foo');
+      const result = option.okOrElse(() => 'bar');
+      expect(result.isOk()).toBe(true);
+      expect(result.getResult()).toBe('foo');
+    });
+
+    it('uses a function to convert to an error Result', () => {
+      const option = Option.none();
+      const result = option.okOrElse(() => 'bar');
+      expect(result.isErr()).toBe(true);
+      expect(result.getError()).toBe('bar');
     });
   });
 
