@@ -1,2 +1,2 @@
-/* tslint:disable:no-console */
-console.log('Hello world');
+export { Option } from './Option';
+export { Result } from './Result';
