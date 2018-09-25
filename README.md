@@ -1,3 +1,3 @@
-# stream-option [![Build Status](https://travis-ci.org/Co0sh/stream-option.svg?branch=master)](https://travis-ci.org/Co0sh/stream-option) [![Coverage Status](https://coveralls.io/repos/github/Co0sh/stream-option/badge.svg)](https://coveralls.io/github/Co0sh/stream-option)
+# option-result [![Build Status](https://travis-ci.org/Co0sh/option-result.svg?branch=master)](https://travis-ci.org/Co0sh/option-result) [![Coverage Status](https://coveralls.io/repos/github/Co0sh/option-result/badge.svg?branch=master)](https://coveralls.io/github/Co0sh/option-result?branch=master)
 
-A JavaScript and TypeScript library with an Option monad and iterable API similar to Java 8 Stream API.
+A lightweight JavaScript and TypeScript library with simple Option and Result monads.
