@@ -1,12 +1,12 @@
 {
-  "name": "stream-option",
+  "name": "option-result",
   "version": "0.1.0",
-  "description": "Stream API for lazy iterable operations using Optional type",
+  "description": "Simple and lightweight Option and Result types inspired by Rust",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Co0sh/stream-option.git"
+    "url": "git+https://github.com/Co0sh/option-result.git"
   },
   "scripts": {
     "build": "tsc",
@@ -18,14 +18,12 @@
     "watch": "jest --watch"
   },
   "keywords": [
-    "iterable",
-    "array",
-    "stream",
-    "lazy",
-    "optional",
     "option",
+    "result",
     "maybe",
-    "monad"
+    "monad",
+    "enum",
+    "rust"
   ],
   "author": "Jakub Sapalski <coosheck@gmail.com> (https://github.com/Co0sh)",
   "license": "ISC",
