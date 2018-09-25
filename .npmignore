@@ -1,0 +1,17 @@
+# infrastructure files
+.vscode
+coverage
+node_modules
+package-lock.json
+*.log
+npm-debug.log*
+
+# project files
+src
+test
+tsconfig.json
+tslint.json
+.prettierrc.json
+.travis.yml
+.travis.yml
+.gitignore
